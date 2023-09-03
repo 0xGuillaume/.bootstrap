@@ -1,0 +1,20 @@
+---
+- name: Download Steampipe
+  ansible.builtin.get_url: 
+    url: "{{ steampipe.url }}"
+    dest: "{{ steampipe.installer }}"
+    mode: "a+x"
+
+- name: Install Steampipe
+  become: true
+  shell: "{{ steampipe.installer }}"
+
+- name: Removed Steampipe installer
+  ansible.builtin.file:
+    name: "{{ steampipe.installer }}"
+    state: absent   
+
+- name: Install Steampipe plugins
+  shell: steampipe plugin install "{{ item }}"
+  loop: "{{ steampipe.plugins }}"
+...
