@@ -44,6 +44,7 @@ packages:
   - exa
   - fish
   - feh
+  - git
   - gnome-tweak-tool
   - gnome-extensions-app
   - golang
@@ -61,4 +62,11 @@ packages:
   - tldr
   - vim
   - vim-powerline
+
+steampipe:
+  url: "https://raw.githubusercontent.com/turbot/steampipe/main/install.sh"
+  installer: /tmp/steampipe_installer.sh
+  plugins:  
+    - aws
+    - csv      
 ...
