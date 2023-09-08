@@ -42,12 +42,14 @@ packages:
   - containerd.io
   - docker-compose
   - exa
+  - fd-find
   - fish
   - feh
   - git
   - gnome-tweak-tool
   - gnome-extensions-app
   - golang
+  - hugo
   - i3
   - keepassxc
   - nodejs
@@ -58,8 +60,10 @@ packages:
   - python3-notebook 
   - mathjax 
   - sscg
+  - starship
   - terraform
   - tldr
+  - tmux
   - vim
   - vim-powerline
 
@@ -69,4 +73,12 @@ steampipe:
   plugins:  
     - aws
     - csv      
+
+
+fonts:
+  - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
+
+starship:
+  url: https://starship.rs/install.sh
+  installer: /tmp/starship_installer.sh  
 ...
