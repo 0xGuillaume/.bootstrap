@@ -28,6 +28,7 @@ home_symbolic_links:
 dirs_to_create:
   - "~/projects"  
   - "~/.config"  
+  - "~/.local/share/fonts"  
 
 user_groups:
   - docker  
@@ -75,10 +76,11 @@ steampipe:
     - csv      
 
 
-fonts:
-  - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
-
-starship:
-  url: https://starship.rs/install.sh
-  installer: /tmp/starship_installer.sh  
+terminal:
+  font:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/CascadiaCode.zip
+    dest: /usr/share/fonts
+  starship:
+    url: https://starship.rs/install.sh
+    installer: /tmp/starship_installer.sh  
 ...
