@@ -3,7 +3,9 @@ user:
   name: salvor
 
 git:
-  dotfiles: https://github.com/0xGuillaume/.dotfiles  
+  dotfiles: 
+    repo: https://github.com/0xGuillaume/.dotfiles  
+    dest: ~/.dotfiles
 
 yum_repositories:
   - name: hashicorp
