@@ -1,7 +1,8 @@
 ---
 #- include_tasks: docker.yaml
+- include_tasks: dotfiles.yaml
 #- include_tasks: essential.yaml
 #- include_tasks: steampipe.yaml
-- include_tasks: terminal.yaml
+#- include_tasks: terminal.yaml
 #- include_tasks: user.yaml
 ...
