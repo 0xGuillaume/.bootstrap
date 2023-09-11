@@ -8,7 +8,7 @@
 - name: Install alacritty package
   become: true
   ansible.builtin.dnf:
-    name: "{{ alacritty.package }}"
+    name: "{{ terminal.alacritty.package }}"
     state: latest
       #- name: Install Fira Code nerd font
       #  ansible.builtin.get_url:
