@@ -1,0 +1,41 @@
+---
+- name: Install starship package
+  ansible.builtin.get_url:
+    url: "{{ terminal.starship.url }}"
+    dest: "{{ terminal.starship.installer }}"
+    mode: "a+x"
+
+- name: Install alacritty package
+  become: true
+  ansible.builtin.dnf:
+    name: "{{ alacritty.package }}"
+    state: latest
+      #- name: Install Fira Code nerd font
+      #  ansible.builtin.get_url:
+      #    url: "{{ terminal.font.src }}"
+      #    dest: "{{ terminal.font.dest }}"
+
+      #- name: Unzip Fira Code nerd font
+      #  become: true
+      #  ansible.builtin.unarchive:
+      #    src: "{{ terminal.font.src }}"
+      #    dest: "{{ terminal.font.dest }}"
+      #    remote_src: yes
+
+      #- name: Install Fira Code nerd font
+      #  shell: fc-cache /usr/share/fonts
+
+
+      #- name: Install third-party packages
+      #  become: true
+      #  ansible.builtin.shell: "{{ starship.installer }}"
+      #
+
+      #- name: Removed terminal files 
+      #  become: true
+      #  ansible.builtin.file:
+      #    name: "{{ terminal.starship.installer }}"
+      #    state: absent  
+      
+
+...
