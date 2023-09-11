@@ -85,4 +85,8 @@ terminal:
   starship:
     url: https://starship.rs/install.sh
     installer: /tmp/starship_installer.sh  
+  alacritty:
+    package: alacritty    
+
+
 ...
