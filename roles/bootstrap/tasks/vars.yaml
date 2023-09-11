@@ -87,6 +87,7 @@ terminal:
     installer: /tmp/starship_installer.sh  
   alacritty:
     package: alacritty    
+    directory: ~/.config/alacritty
 
 
 ...
