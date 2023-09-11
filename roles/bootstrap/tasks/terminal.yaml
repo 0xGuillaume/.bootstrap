@@ -10,6 +10,11 @@
   ansible.builtin.dnf:
     name: "{{ terminal.alacritty.package }}"
     state: latest
+
+- name: Creating alacritty config directory
+  ansible.builtin.file:
+    path: "{{ terminal.alacritty.directory }}"
+    state: directory          
       #- name: Install Fira Code nerd font
       #  ansible.builtin.get_url:
       #    url: "{{ terminal.font.src }}"
