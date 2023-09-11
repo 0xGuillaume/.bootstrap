@@ -4,7 +4,7 @@ user:
 
 git:
   dotfiles: 
-    repo: https://github.com/0xGuillaume/.dotfiles  
+    repo: git@github.com:0xGuillaume/.dotfiles.git
     dest: ~/.dotfiles
 
 yum_repositories:
