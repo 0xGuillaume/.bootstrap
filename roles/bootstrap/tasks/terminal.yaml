@@ -15,6 +15,16 @@
   ansible.builtin.file:
     path: "{{ terminal.alacritty.directory }}"
     state: directory          
+
+- name: Creating polybar config directory
+  ansible.builtin.file:
+    path: "{{ terminal.polybar.directory }}"
+    state: directory          
+
+- name: Creating rofi config directory
+  ansible.builtin.file:
+    path: "{{ terminal.rofi.directory }}"
+    state: directory          
       #- name: Install Fira Code nerd font
       #  ansible.builtin.get_url:
       #    url: "{{ terminal.font.src }}"
