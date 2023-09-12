@@ -37,7 +37,7 @@ user_groups:
 
 packages:    
   - asciidoctor
-  - azure-cli
+    #- azure-cli
   - bat
   - dnf-plugins-core
   - docker-ce 
@@ -56,14 +56,15 @@ packages:
   - i3
   - keepassxc
   - nodejs
+  - polybar
   - powerline 
   - powerline-fonts
   - python3
   - python3-virtualenv
   - python3-notebook 
+  - rofi 
   - mathjax 
   - sscg
-  - starship
   - terraform
   - tldr
   - tmux
@@ -88,6 +89,10 @@ terminal:
   alacritty:
     package: alacritty    
     directory: ~/.config/alacritty
+  rofi:
+    directory: ~/.config/rofi
+  polybar:
+    directory: ~/.config/polybar
 
 
 ...
