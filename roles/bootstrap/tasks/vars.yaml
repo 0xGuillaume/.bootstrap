@@ -78,7 +78,6 @@ steampipe:
     - aws
     - csv      
 
-
 terminal:
   font:
     src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/CascadiaCode.zip
@@ -93,6 +92,6 @@ terminal:
     directory: ~/.config/rofi
   polybar:
     directory: ~/.config/polybar
-
-
+    ini_src: ~/.dotfiles/polybar/config.ini
+    ini_dest: /etc/polybar
 ...
