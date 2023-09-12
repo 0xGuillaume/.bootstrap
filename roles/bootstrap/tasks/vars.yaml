@@ -92,6 +92,6 @@ terminal:
     directory: ~/.config/rofi
   polybar:
     directory: ~/.config/polybar
-    ini_src: ~/.dotfiles/polybar/config.ini
-    ini_dest: /etc/polybar
+    src: ~/.dotfiles/polybar/config.ini
+    etc: /etc/polybar/config.ini
 ...
