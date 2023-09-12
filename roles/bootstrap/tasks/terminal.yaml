@@ -11,20 +11,15 @@
     name: "{{ terminal.alacritty.package }}"
     state: latest
 
-- name: Creating alacritty config directory
+- name: Creating terminal config directories
   ansible.builtin.file:
-    path: "{{ terminal.alacritty.directory }}"
+    path: "{{ item }}"
     state: directory          
+  loop:
+    - "{{ terminal.alacritty.directory }}"
+    - "{{ terminal.polybar.directory }}"
+    - "{{ terminal.rofi.directory }}"
 
-- name: Creating polybar config directory
-  ansible.builtin.file:
-    path: "{{ terminal.polybar.directory }}"
-    state: directory          
-
-- name: Creating rofi config directory
-  ansible.builtin.file:
-    path: "{{ terminal.rofi.directory }}"
-    state: directory          
       #- name: Install Fira Code nerd font
       #  ansible.builtin.get_url:
       #    url: "{{ terminal.font.src }}"
