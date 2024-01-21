@@ -1,0 +1,11 @@
+---
+- name: Install productivity/tools packages
+  become: true
+  dnf:
+    name:
+      - tldr
+      - fzf
+      - ripgrep
+      - screenkey
+      - tmux
+...
