@@ -1,6 +1,6 @@
 ## Ansible tasks to do :
 
-- [ ] nvim
+- [x] nvim
 - [ ] dotfiles
 - [ ] tools (productivity)
 - [ ] terminal (Alacritty, fish)
