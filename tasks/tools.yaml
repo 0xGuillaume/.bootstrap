@@ -5,6 +5,7 @@
     name:
       - tldr
       - fzf
+      - fd-find
       - ripgrep
       - screenkey
       - tmux
