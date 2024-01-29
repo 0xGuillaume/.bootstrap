@@ -1,0 +1,26 @@
+---
+- name: Creating projects dir
+  file:
+    path: ~/projects
+    state: directory
+
+- name: Installing stow
+  dnf:
+    name: stow
+  become: true
+
+- name: Cloning dotfiles
+  git:
+    repo: https://github.com/0xGuillaume/.dotfiles.git
+    dest: ~/projects/.dotfiles
+
+- name: Preventing stowing error by deleting home dotfiles
+  command: find . -type f -exec rm ~/{} \;
+  args:
+    chdir: ~/projects/.dotfiles
+
+- name: Stowing dotfiles
+  command: stow .dotfiles
+  args:
+    chdir: ~/projects
+...
