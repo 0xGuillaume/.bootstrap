@@ -1,0 +1,19 @@
+---
+- name: Install terminal & shell
+  dnf:
+    name: 
+      - fish
+      - alacritty
+      - wget
+  become: true
+
+- name: Install Starship prompt
+  command: "{{ item }}"
+  with_items:
+    - wget https://starship.rs/install.sh -O /tmp/install.sh 
+    - sh /tmp/install.sh -y 
+    - rm /tmp/install.sh -f
+    
+- name: Change default shell
+  command: chsh -s /usr/bin/fish
+...
