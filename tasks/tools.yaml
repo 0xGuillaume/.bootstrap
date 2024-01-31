@@ -4,6 +4,7 @@
   dnf:
     name:
       - tldr
+      - eza
       - fzf
       - fd-find
       - ripgrep
