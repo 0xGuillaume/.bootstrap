@@ -1,8 +1,9 @@
 ## Ansible tasks to do :
 
 - [x] nvim
-- [ ] dotfiles
-- [ ] tools (productivity)
-- [ ] terminal (Alacritty, fish)
+- [x] dotfiles
+- [x] tools (productivity)
+- [x] terminal (Alacritty, fish)
 - [ ] desktop_environment (i3, rofi)
-- [ ] infrastructure_tools
+- [ ] container (docker)
+- [ ] cloud (aws cli, terraform)
