@@ -1,8 +1,0 @@
----
-- name: Install fish
-  dnf:
-    name: fish
-
-- name: Change default shell
-  shell: chsh -s $(which fish)
-...
