@@ -6,6 +6,7 @@
       - python3-neovim
       - ripgrep
       - unzip
+      - gcc-c++
   become: true
 
 - name: Install Neovim package manager Packer
