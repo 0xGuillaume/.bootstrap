@@ -1,6 +1,24 @@
 ---
 - hosts: localhost
-
   tasks:
-    - include_tasks: tasks/fish.yaml 
+    - include_tasks: tasks/tools.yaml
+      tags: tools
+
+    - include_tasks: tasks/desktop.yaml
+      tags: desktop
+
+    - include_tasks: tasks/cloud.yaml
+      tags: cloud
+
+    - include_tasks: tasks/docker.yaml 
+      tags: docker
+
+    - include_tasks: tasks/dotfiles.yaml
+      tags: dotfiles
+
+    - include_tasks: tasks/nvim.yaml 
+      tags: nvim
+
+    - include_tasks: tasks/terminal.yaml
+      tags: terminal
 ...
