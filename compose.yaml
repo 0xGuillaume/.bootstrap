@@ -7,8 +7,8 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./tasks
-          target: /tmp/tasks
+          path: .
+          target: /tmp/
           ignore:
             - todo.md
             - README.md
