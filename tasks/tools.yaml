@@ -10,4 +10,5 @@
       - ripgrep
       - screenkey
       - tmux
+      - zoxide
 ...
