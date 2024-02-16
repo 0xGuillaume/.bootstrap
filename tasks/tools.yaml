@@ -11,4 +11,13 @@
       - screenkey
       - tmux
       - zoxide
+
+- name: Install programming languages
+  become: true
+  dnf:
+    name:
+      - python3
+      - python3-pip
+      - python3-venv
+      - golang
 ...
