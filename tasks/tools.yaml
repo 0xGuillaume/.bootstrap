@@ -1,0 +1,36 @@
+---
+- name: Install common packages
+  become: true
+  dnf:
+    name:
+      - unzip
+      - git
+
+- name: Install productivity/tools packages
+  become: true
+  dnf:
+    name:
+      - tldr
+      - eza
+      - fzf
+      - fd-find
+      - ripgrep
+      - screenkey
+      - tmux
+      - zoxide
+
+- name: Install programming languages
+  become: true
+  dnf:
+    name:
+      - python3
+      - python3-pip
+      - python3-virtualenv
+      - golang
+
+- name: Install database engine/CLI
+  become: true
+  dnf:
+    name: 
+      - sqlite3
+...

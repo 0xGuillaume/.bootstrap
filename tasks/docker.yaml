@@ -1,0 +1,30 @@
+---
+- name: Dnf plugin core
+  dnf:
+    name: dnf-plugins-core
+
+- name: Install Docker repository
+  command: dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+
+- name: Install Docker
+  dnf:
+    name: "{{item}}"
+  with_items:
+    - docker-ce 
+    - docker-ce-cli 
+    - containerd.io 
+    - docker-buildx-plugin 
+    - docker-compose-plugin
+    - docker-compose
+
+- name: Enabled docker service
+  become: true
+  service:
+    name: docker
+    enabled: true          
+    state: started
+
+- name: Create docker group
+  group:
+    name: docker
+...

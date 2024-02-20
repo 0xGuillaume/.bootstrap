@@ -1,0 +1,8 @@
+---
+- name : Replaced user default dirs name
+  command: sed -E 's/\b[A-Z][a-z].*?\b/\L&/g' -i /etc/xdg/user-dirs.defaults
+  become: true
+
+- name: Update user default dirs name
+  command: xdg-user-dirs-update --force
+...

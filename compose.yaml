@@ -1,0 +1,17 @@
+---
+services:
+  fedora:
+    build: .
+    stdin_open: true
+    tty: true
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /tmp/
+          ignore:
+            - todo.md
+            - README.md
+            - compose.yaml
+            - Dockerfile
+...

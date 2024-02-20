@@ -1,0 +1,19 @@
+- name: Install Neovim and plugins required packages
+  dnf:
+    name:
+      - go
+      - neovim
+      - python3-neovim
+      - ripgrep
+      - unzip
+      - gcc-c++
+  become: true
+
+- name: Install Neovim package manager Packer
+  git:
+    repo: "https://github.com/wbthomason/packer.nvim"
+    dest: ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+    depth: 1
+
+- name: Neovim Packer Sync plugins
+  command: nvim --headless +'autocmd User PackerComplete sleep 100m | write ~/.packer.sync.result | qall' +PackerSync 
