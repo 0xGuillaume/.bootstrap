@@ -16,8 +16,8 @@
     - include_tasks: tasks/dotfiles.yaml
       tags: dotfiles
 
-        #- include_tasks: tasks/nvim.yaml 
-        #  tags: nvim
+    - include_tasks: tasks/nvim.yaml 
+      tags: nvim
 
     - include_tasks: tasks/terminal.yaml
       tags: terminal
