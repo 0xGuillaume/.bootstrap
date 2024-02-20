@@ -1,6 +1,6 @@
 # .bootstrap
 
-Bootstrap a ready to use a Fedora _like_ dev environment. 🐧​
+Bootstrap a ready to use Fedora _dev environment_. 🐧​
 
 ## Run the playbook
 
