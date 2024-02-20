@@ -1,11 +1,8 @@
 ---
-- name: Install discord
-  dnf: 
-    name: 
-      - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-      - discord
-  become: true
-  
-- name : Replaced default user dirs name
+- name : Replaced user default dirs name
   command: sed -E 's/\b[A-Z][a-z].*?\b/\L&/g' -i /etc/xdg/user-dirs.defaults
+  become: true
+
+- name: Update user default dirs name
+  command: xdg-user-dirs-update --force
 ...
