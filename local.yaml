@@ -13,9 +13,6 @@
     - include_tasks: tasks/docker.yaml 
       tags: docker
 
-    - include_tasks: tasks/dotfiles.yaml
-      tags: dotfiles
-
     - include_tasks: tasks/nvim.yaml 
       tags: nvim
 
@@ -24,4 +21,7 @@
 
     - include_tasks: tasks/user.yaml
       tags: user
+
+    - include_tasks: tasks/dotfiles.yaml
+      tags: dotfiles
 ...
