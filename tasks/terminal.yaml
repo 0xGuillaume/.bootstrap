@@ -22,4 +22,5 @@
     
 - name: Change default shell
   command: chsh -s /usr/bin/fish
+  become: true
 ...
