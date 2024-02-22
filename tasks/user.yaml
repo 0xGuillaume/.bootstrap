@@ -7,7 +7,8 @@
   command: xdg-user-dirs-update --force
 
 - name: Remove older user default dirs
-  shell: rm -rf $(cat /etc/xdg/user-dirs.defaults | grep -E '^[A-Z]' | tr '=' '\n' | grep -E '[a-z]' | sed 's/./\U&/')
+  shell: rmdir $(cat /etc/xdg/user-dirs.defaults | grep -E '^[A-Z]' | tr '=' '\n' | grep -E '[a-z]' | sed 's/./\U&/') --ignore-fail-on-non-empty 2>/dev/null
   args:
     chdir: "~/"
+  ignore_errors: true
 ...
