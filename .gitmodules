@@ -1,3 +1,0 @@
-[submodule "bootstrap/.dotfiles"]
-	path = ./roles/bootstrap/.dotfiles
-	url = https://github.com/0xGuillaume/.dotfiles
