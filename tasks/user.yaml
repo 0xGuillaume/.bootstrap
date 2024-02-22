@@ -5,4 +5,9 @@
 
 - name: Update user default dirs name
   command: xdg-user-dirs-update --force
+
+- name: Remove older user default dirs
+  command: rmdir $(cat /etc/xdg/user-dirs.defaults | grep -E '^[A-Z]' | tr '=' '\n' | grep -E '[a-z]' | sed 's/./\U&/')
+  args:
+    chdir: "~/"
 ...
