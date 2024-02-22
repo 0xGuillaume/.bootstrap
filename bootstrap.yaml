@@ -1,9 +1,0 @@
----
-- hosts: localhost
-  connection: local
-  gather_facts: no
-  roles:
-    - role: "roles/bootstrap/"
-  vars_files: 
-    - ./roles/bootstrap/tasks/vars.yaml
-...
