@@ -4,6 +4,7 @@
     src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/CascadiaCode.zip
     dest: /usr/share/fonts
     remote_src: yes
+  become: true
 
 - name: Install Cascadia nerd dont
   command: fc-cache /usr/share/fonts
