@@ -13,6 +13,12 @@
     - wget https://starship.rs/install.sh -O /tmp/install.sh 
     - sh /tmp/install.sh -y 
     - rm /tmp/install.sh -f
+
+- name: Install chsh command if not installed
+  dnf:
+    name:
+      - util-linux-user
+  become: true
     
 - name: Change default shell
   command: chsh -s /usr/bin/fish
