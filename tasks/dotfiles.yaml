@@ -13,6 +13,7 @@
   git:
     repo: https://github.com/0xGuillaume/.dotfiles.git
     dest: ~/projects/.dotfiles
+    recursive: yes
 
 - name: Preventing stowing error by deleting home dotfiles
   command: find . -type f -exec rm ~/{} \;
