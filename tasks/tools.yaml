@@ -12,6 +12,7 @@
     name:
       - tldr
       - eza
+      - bat
       - fzf
       - fd-find
       - ripgrep
