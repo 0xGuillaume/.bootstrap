@@ -25,6 +25,6 @@
 - name: Install AWS CLI & remove installer
   command: "{{ item }}"
   with_items:
-    - sudo /tmp/aws/install
+    - sudo /tmp/aws/install --update
     - rm /tmp/aws -rf
   become: true
